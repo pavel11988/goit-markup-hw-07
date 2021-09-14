@@ -80,22 +80,19 @@ img {
 
 /* ----------------- */
 
-/* Шапка и Футер*/
+/* Шапка */
 
 .header {
   border-bottom: 1px solid #ececec;
 }
 
-.studio-header {
-  color: var(--text-black-color);
+.header__main-navigation {
+  display: flex;
+  align-items: center;
+  color: var(--static-svg-black-color);
 }
 
-.studio-footer {
-  color: var(--white-color);
-}
-
-.header-logo,
-.footer-logo {
+.main-navigation__header-logo {
   color: var(--text-blue-color);
 
   font-family: Raleway;
@@ -105,23 +102,22 @@ img {
   text-decoration: none;
 }
 
-/* Навигация */
-.main-nav {
-  display: flex;
-  align-items: center;
-  color: var(--static-svg-black-color);
+.header-logo__second-part  {
+  color: var(--text-black-color);
 }
 
-.header-nav {
+/* Навигация */
+
+.main-navigation__list {
   display: flex;
   margin-left: 93px;
 }
 
-.header-nav > .nav-item:not(:last-child) {
+.main-navigation__item:not(:last-child) {
   margin-right: 50px;
 }
 
-.header-nav .nav-link {
+.main-navigation__link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -135,20 +131,20 @@ img {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nav-link:visited {
+.main-navigation__link:visited {
   color: var(--text-black-color);
 }
 
 /* Подчеркивание активной страницы */
-.nav-item {
+.main-navigation__item {
   position: relative;
 }
 
-.nav-link.current {
+.main-navigation__link.current {
   color: var(--text-blue-color);
 }
 
-.nav-item.current::after {
+.main-navigation__item.current::after {
   content: '';
   position: absolute;
   display: flex;
@@ -160,17 +156,15 @@ img {
   bottom: -1px;
 }
 
-.header-nav .nav-link:hover,
-.header-nav .nav-link:focus,
-.header-contacts .contacts-link:hover,
-.header-contacts .contacts-link:focus,
-.footer-link:hover,
-.footer-link:focus {
+.main-navigation__link:hover,
+.main-navigation__link:focus,
+.header__contacts-link:hover,
+.header__contacts-link:focus {
   color: var(--text-blue-color);
   fill: var(--hover-svg-blue-color);
 }
 
-.header-contacts {
+.header__contacts-list {
   display: flex;
   margin-left: auto;
 
@@ -180,11 +174,11 @@ img {
   letter-spacing: 0.02em;
 }
 
-.header-contacts .contacts-item:not(:last-child) {
+.header__contacts-item:not(:last-child) {
   margin-right: 50px;
 }
 
-.header-contacts .contacts-link {
+.header__contacts-link {
   color: var(--text-gray-color);
   text-decoration: none;
 
@@ -197,17 +191,21 @@ img {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contacts-link.e-mail > .link-item {
+.header__contacts-icon-email {
+  fill: currentColor;
   width: 16px;
   height: 12px;
   margin-right: 10px;
 }
 
-.contacts-link.telephone > .link-item {
+.header__contacts-icon-telephone {
+  fill: currentColor;
   width: 10px;
   height: 16px;
   margin-right: 10px;
 }
+
+/* Футер */
 
 .footer {
   padding-top: 60px;
@@ -217,11 +215,24 @@ img {
   text-decoration: none;
 }
 
-.footer-logo {
+.footer__footer-logo {
   margin-bottom: 20px;
+  color: var(--text-blue-color);
+
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  text-decoration: none;
 }
 
-.footer-adreess {
+.footer-logo__second-part {
+  color: var(--white-color);
+}
+
+/* Адресса */
+
+.footer__adreess-content {
   color: var(--white-color);
 
   font-size: 14px;
@@ -231,7 +242,7 @@ img {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-link {
+.footer__adress-link {
   color: var(--text-color-white-transparent);
   text-decoration: none;
   margin-top: 9px;
@@ -239,23 +250,20 @@ img {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer .social-links-link {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: var(--white-color);
+.footer__adress-link:hover,
+.footer__adress-link:focus {
+  color: var(--text-blue-color);
+  fill: var(--hover-svg-blue-color);
 }
 
-.footer .social-links-link:hover,
-.footer .social-links-link:focus {
-  background-color: var(--hover-svg-blue-color);
-}
+/* Социальные сети */
 
-.footer-social-links {
+.footer__social-links {
   padding-top: 12px;
   margin-left: 70px;
 }
 
-.footer-social-links-title {
-
+.social-links-title {
   margin-bottom: 20px;
   font-family: Roboto;
   font-weight: 700;
@@ -265,16 +273,28 @@ img {
   color: #ffffff;
 }
 
-.footer-subscribe {
+.social-networks-link {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--white-color);
+}
+
+.social-networks-link:hover,
+.social-networks-link:focus {
+  background-color: var(--hover-svg-blue-color);
+}
+
+/* Подписка на рассылку */
+
+
+.footer__form-subscribe {
   padding-top: 12px;
   padding-bottom: 34px;
   margin-left: 93px;
 }
 
-.footer-subscribe-label {
+.subscribe__label {
   
   width: 358px;
-
 
   font-weight: 700;
   font-size: 14px;
@@ -283,11 +303,11 @@ img {
   color: var(--white-color);
 }
 
-.footer-subscribe-instruments {
+.subscribe__instruments {
   display: flex;
 }  
 
-.footer-subscribe-input {
+.subscribe__input {
 
   height: 50px;
   width: 100%;
@@ -311,14 +331,14 @@ img {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-subscribe-input:focus,
-.footer-subscribe-input:active,
-.footer-subscribe-input:hover  {
+.subscribe__input:focus,
+.subscribe__input:active,
+.subscribe__input:hover  {
   border-color:#2196F3;
 }
 
 
-.footer-subscribe-button {
+.subscribe__button {
   position: relative;
 
   min-width: 200px;
@@ -349,13 +369,13 @@ img {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-subscribe-button:hover,
-.footer-subscribe-button:focus {
+.subscribe__button:hover,
+.subscribe__button:focus {
   background-color: var(--btn-hover-blue-color);
   color: rgb(238, 238, 238);
 }
   
-.footer-icon-svg {
+.subscribe__button-icon {
   position: absolute;
 
   top: 50%;
@@ -364,6 +384,7 @@ img {
   transform: translateY(-50%);
   fill: currentColor;
 }
+
 
 /* Основной контент */
 
@@ -592,7 +613,7 @@ img {
   display: inline-flex;
 }
 
-.social-links-item {
+.social-networks-item {
   width: 44px;
   height: 44px;
 }
