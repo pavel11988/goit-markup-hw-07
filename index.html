@@ -12,7 +12,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Oleo+Script&family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
         rel="stylesheet">  
-    <link rel="stylesheet" href="./css/styles.css">
+    <!-- <link rel="stylesheet" href="./css/styles.css"> -->
+    <link rel="stylesheet" href="./css/main.min.css">
 </head>
 
 <body>
@@ -20,12 +21,7 @@
     <header class="header"> 
             <div class="container header__main-navigation">
                 <nav class="header__main-navigation">
-                    <a href='./index.html' lang="en" class="main-navigation__header-logo">
-                            Web
-                        <span class="header-logo__second-part">
-                            Studio
-                        </span>
-                    </a>
+                    <a href='./index.html' lang="en" class="logo">Web<span class="header-logo">Studio</span></a>
                     
                     <ul lang="ru" class="main-navigation__list list">
                         <li class="main-navigation__item current">  <a href='./index.html' class="main-navigation__link current">Студия </a></li>
@@ -275,7 +271,7 @@
                 <ul class="clients__list list">
                     <li class="clients__item">
                         <a class="clients__link">
-                            <svg class="link-svg">
+                            <svg class="clients__link-svg">
                                 <use href="./images/icons/sprite.svg#icon-logo_yaco"></use>
                             </svg>
                         </a> 
@@ -283,7 +279,7 @@
                       
                     <li class="clients__item">
                         <a class="clients__link">
-                            <svg class="link-svg">
+                            <svg class="clients__link-svg">
                                 <use href="./images/icons/sprite.svg#icon-logo_com_tagline_here"></use>
                             </svg>
                         </a>
@@ -291,7 +287,7 @@
 
                     <li class="clients__item">
                         <a class="clients__link">
-                            <svg class="link-svg">
+                            <svg class="clients__link-svg">
                                 <use href="./images/icons/sprite.svg#icon-logo_company"></use>
                             </svg>
                         </a>
@@ -299,7 +295,7 @@
 
                     <li class="clients__item">
                         <a class="clients__link">
-                            <svg class="link-svg">
+                            <svg class="clients__link-svg">
                                 <use href="./images/icons/sprite.svg#icon-logo_foster_peters"></use>
                             </svg>
                         </a>
@@ -307,7 +303,7 @@
 
                     <li class="clients__item">
                         <a class="clients__link">
-                            <svg class="link-svg">
+                            <svg class="clients__link-svg">
                                 <use href="./images/icons/sprite.svg#icon-logo_brand"></use>
                             </svg>
                         </a>
@@ -315,7 +311,7 @@
 
                     <li class="clients__item">
                         <a class="clients__link">
-                            <svg class="link-svg">
+                            <svg class="clients__link-svg">
                                 <use href="./images/icons/sprite.svg#icon-logo_com_tag_line"></use>
                             </svg>
                         </a>
@@ -329,7 +325,7 @@
     <footer class="footer">
         <div class="container footer">
             <div class="footer__adress">
-                <a href='./index.html' lang="en" class="footer__footer-logo">Web<span class="footer-logo__second-part">Studio</span></a>
+                <a href='./index.html' lang="en" class="logo">Web<span class="footer-logo">Studio</span></a>
                 <address class="footer__adreess-content">
                     г. Киев, пр-т Леси Украинки, 26 <br>
                     <a href='mailto:info@example.com' class='footer__adress-link'>info@example.com</a> <br>
@@ -405,7 +401,7 @@
             <form class="modal__form">
 
                 <div class="form-field">
-                    <label for="form-field__name" class="form-field__label">Имя
+                    <label for="name" class="form-field__label">Имя
                         <span class="form-field__span">
                             <input class="form-field__input" type="text" name="name" id="name" required autofocus />
                             <span class="form-field__input-icon">
@@ -458,7 +454,7 @@
                                 <use href="./images/icons/sprite.svg#icon-min_check"></use>
                             </svg>
                         </span>
-                        <span class="policy__text">Соглашаюсь с рассылкой и принимаю <a class="policy__link-policy" href="">Условия договора</a></span>
+                        <span class="policy__text">Соглашаюсь с рассылкой и принимаю <a class="policy__text--blue" href="">Условия договора</a></span>
                     </label>
                 </div>
             
